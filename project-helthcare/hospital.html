@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Care</title>
+  <link rel="stylesheet" href="hospital.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- NAV BAR -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid d-flex justify-content-evenly"
+    style="position: fixed; z-index: 1000; ">
+    <div class="col-md-3 d-flex justify-content-end ">
+      <a class="navbar-brand  " href="#">
+        <img src="logo1.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse  col-md-5 " id="navbarSupportedContent">
+      <ul class="navbar-nav  col-md-8 d-flex justify-content-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <h5><b>Home</b></h5>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">
+            <h5><b>About Us</b></h5>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <h5><b>Service</b></h5>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <h5><b>Contact us</b></h5>
+          </a>
+        </li>
+      </ul>
+      <a href="/login/index.html">
+        <button type="button" class="btn btn-info">Book an Appointment</button></a>
+
+    </div>
+
+
+  </nav>
+
+  <!-- ----------SLIDDER--------------- -->
+
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active "
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- bs-info -->
+
+      <div class="carousel-item active">
+        <img src="img1.1.webp" class="d-block w-100" alt="..." style="height: 650px; ">
+        <div class="carousel-caption " style="color: aqua; justify-content: start; text-align: left;">
+          <h1>Best Free Clinic Template</h1>
+          <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum repudiandae deleniti, amet,
+            voluptas iste soluta asperiores illo impedit explicabo dolore fugiat porro possimus praesentium repellendus
+            voluptate inventore maxime ea.</h6>
+            <a href="/login/index.html">
+              <button type="button" class="btn btn-info">Book an Appointment</button></a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <img src="img1.3.jpg" class="d-block w-100" alt="..." style="height: 650px; ">
+        <div class="carousel-caption " style="color: aqua; justify-content: start; text-align: left;">
+          <h1>Best Free Clinic Template</h1>
+          <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum repudiandae deleniti, amet,
+            voluptas iste soluta asperiores illo impedit explicabo dolore fugiat porro possimus praesentium repellendus
+            voluptate inventore maxime ea.</h6>
+            <a href="/login/index.html">
+              <button type="button" class="btn btn-info">Book an Appointment</button></a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <img src="img1.5.jpg" class="d-block w-100" alt="..." style="height: 650px; ">
+        <div class="carousel-caption " style="color: aqua; justify-content: start; text-align: left;">
+          <h1>Best Free Clinic Template</h1>
+          <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum repudiandae deleniti, amet,
+            voluptas iste soluta asperiores illo impedit explicabo dolore fugiat porro possimus praesentium repellendus
+            voluptate inventore maxime ea.</h6>
+            <a href="/login/index.html">
+              <button type="button" class="btn btn-info">Book an Appointment</button></a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- -----------------------card----------------------------- -->
+  <div class="col-md-12 container-fluid  card-ribbon ">
+    <div class="row">
+    <div class="col-md-3 card1">
+      <div class="card " style="width: 100%;">
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="img2.1.png" class="card-img-top " alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Newest Technologies</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates autem alias, in dicta
+            explicabo quos provident accusamus corporis. </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card2">
+      <div class="card " style="width: 100%;">
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="img2.2.png" class="card-img-top d-flex justify-content-center" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Experianced Doctors</h5>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aliquid, voluptatum
+            quibusdam similique explicabo et.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card3">
+      <div class="card" style="width: 100%;">
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="img2.3.webp" class="card-img-top d-flex justify-content-center" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">High Customer Satisfaction</h5>
+          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero itaque molestias
+            architecto facilis facere? Eligendi, deserunt repellendus. </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 card4">
+      <div class="card d-flex justify-content-center" style="width: 100%;">
+        <div class="col-md-12 d-flex justify-content-center">
+          <img src="img2.4.png" class="card-img-top " alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Pharma Pipeline</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+            doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+  <!-- ------------------------------WHY US------------------- -->
+
+
+
+  <div class="container  why-us " >
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Why choos Health Care with <br><span>Medical Hospital</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium vero earum architecto ullam aliquam
+          alias placeat nihil soluta natus impedit maxime, obcaecati, dolorum, omnis voluptates officiis mollitia
+          possimus pariatur doloremque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sit porro commodi vitae quidem, voluptates eum
+          consectetur, dolorum maxime aliquid suscipit repudiandae voluptatem cupiditate atque. Harum numquam placeat
+          aperiam dolorem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sit porro commodi vitae quidem, voluptates eum
+          consectetur, dolorum maxime aliquid suscipit repudiandae voluptatem cupiditate atque. Harum numquam placeat
+          aperiam dolorem.</p>
+      </div>
+      <div class="col-md-6 why-us-img">
+        <img src="img3.1.jpg" alt="">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------------------------KEY FEATURES------------------------------------- -->
+
+  <div class="container-fluid key-features">
+
+    <div class="col-md-12">
+      <h3>Our Key Features</h3>
+      <p>Take a look at some of our key features</p>
+    </div>
+
+    <div class="col-md-12 ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img4.1.png" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Cardiology</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img4.2.png" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Orthopaedic</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img4.3.png" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Neurologist</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="col-md-12 ">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-3">
+            <div class="card d-flex justify-content-center" style="width: 100%;">
+              <div class="col-md-12 d-flex justify-content-center">
+                <img src="img4.4.png" class="card-img-top " alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pharma Pipeline</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                  doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card d-flex justify-content-center" style="width: 100%;">
+              <div class="col-md-12 d-flex justify-content-center">
+                <img src="img4.5.png" class="card-img-top " alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pharma Team</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                  doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card d-flex justify-content-center" style="width: 100%;">
+              <div class="col-md-12 d-flex justify-content-center">
+                <img src="img4.6.png" class="card-img-top " alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">High Quality treatment</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                  doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ---------------------------------------BLOG----------------------------- -->
+
+  <div class="container-fluid blog">
+
+    <div class="col-md-12">
+      <h3>Our Blog</h3>
+      <p>Take a look at what people say about us</p>
+    </div>
+
+    <div class="col-md-12 ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img5.1.webp" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Methods of Recuirtments</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img5.2.jpg" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Methods of Recuirtments</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card d-flex justify-content-center" style="width: 100%;">
+            <div class="col-md-12 d-flex justify-content-center">
+              <img src="img5.3.jpg" class="card-img-top " alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Methods of Recuirtments</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta dolor repellat
+                doloremque fuga ab vitae laboriosam accusamus natus nam! </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------Footer------------------------------------ -->
+
+  <div class="container-fluid footer">
+
+    <div class="col-md-12 ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3">
+          <h4>About Us</h4>
+          <p>Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.</p>
+          <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global...
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h4>Useful Links</h4>
+
+          <div class="row">
+            <div class="col-md-3" id="aboutus">About Us</div>
+            <div class="col-md-8"></div>
+            <div class="col-md-1"><i class="fa-solid fa-chevron-right"></i></div>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-md-3">Services</div>
+            <div class="col-md-8"></div>
+            <div class="col-md-1"><i class="fa-solid fa-chevron-right"></i></div>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-md-3">Home</div>
+            <div class="col-md-8"></div>
+            <div class="col-md-1"><i class="fa-solid fa-chevron-right"></i></div>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-md-3">Contact Us</div>
+            <div class="col-md-8"></div>
+            <div class="col-md-1"><i class="fa-solid fa-chevron-right"></i></div>
+            <hr>
+          </div>
+          
+          
+        </div>
+
+        <div class="col-md-2">
+          <h4>Contact Us</h4>
+          <p><b>Logi Union Technology 3, Ramchandra Apartment, Near State Bank of India, Thane-421605, Maharashtra, India <br>Phone: +91 1234567890 <br>Email: support@blogicunion.in <br>Web:www.logicunion.in</b></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid subfooter">
+  <div class="col-md-12 container ">
+    <div class="row">
+    <div class="col-md-9">
+    <p>2015@All Rights Reserved | Designed and Developed by Darshan Jadhav</p></div>
+
+    <div class="col-md-3">
+      <i class="fa-brands fa-github" style="color: #faf9f9;"></i>
+      <i class="fa-brands fa-google-plus-g" style="color: #faf9f9;"></i>
+      <i class="fa-brands fa-pinterest" style="color: #faf9f9;"></i>
+      <i class="fa-brands fa-twitter" style="color: #faf9f9;"></i>
+      <i class="fa-brands fa-facebook" style="color: #faf9f9;"></i>
+    </div></div>
+  </div></div>
+
+</body>
+
+</html>

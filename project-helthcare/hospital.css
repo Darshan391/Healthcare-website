@@ -1,0 +1,117 @@
+nav{
+    box-shadow: 2px 2px rgb(181, 178, 178);
+}
+nav li{
+    margin-left: 20px;
+}
+nav img{
+    width: 200px;
+}
+.carousel-inner img{
+    height: 500px;
+}
+
+body{
+    background-color: brown;
+}
+.carousel{
+    /* margin-top: 100px; */
+    padding-top: 80px;
+}
+
+/* ------------------------------------card ribbon----------------------------- */
+.card-ribbon .card{
+    border: none;
+    background: transparent;
+
+
+}
+
+.card1, .card3{
+    background-color: rgb(41, 83, 235);
+    text-align: center;
+    /* border: 2px solid rebeccapurple; */
+    /* width: 25%; */
+    
+   
+} 
+.card2, .card4{
+    background-color: rgb(0, 181, 252);
+    text-align: center;
+    /* width: 25%; */
+
+    
+}
+.card-ribbon .card img{
+    width: 100px;
+    padding: 20px;
+    
+}
+
+/* --------------------------why to choos us------------------------- */
+.why-us span{
+    color: rgb(0, 99, 186);
+}
+.why-us-img img{
+    height: 400px; 
+    
+    width: 100%;
+}
+.why-us{
+    margin-top: 100px;
+    word-spacing: 10px;
+    text-align: justify;
+}
+
+/* ---------------------------------------------key features--------------------------- */
+.key-features{
+    text-align: center;
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+    padding-bottom: 50px;
+    padding-top: 20px;
+    background-color: rgb(194, 206, 246);
+}
+.key-features img{
+    width: 100px;
+    height: 100px;
+}
+.key-features .col-md-12{
+    margin-top: 20px;
+}
+.blog{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.blog img{
+    height: 300px;
+}
+.footer{
+    padding-top: 50px;
+    text-align: justify;
+    color: aliceblue;
+    background-color: rgb(80, 73, 73);
+}
+.subfooter{
+    background-color: rgb(47, 43, 43);
+    color: aliceblue;
+    padding-top: 5px;
+}
+i{
+    margin: 5px;
+}
+i:hover{
+    cursor: pointer;
+}
+
+.key-features .card img:hover{
+    transform: scale(1.1);
+    transition-duration: 2s;
+    background-color: beige;
+    /* transform: scale3d(1.1); */
+}
+.card-ribbon img:hover{
+    transform: scale(1.2);
+    transition-duration: 2s;
+}

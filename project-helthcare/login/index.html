@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #03a9f4;
+		min-height: 100vh;
+		transition: 1s;
+	}
+	.slide{
+		background-color: #f43648;
+	}
+	.container{
+		position: relative;
+		width: 800px;
+		height: 400px;
+		background-color: rgba(0,0,0,.125);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container .box{
+		position: relative;
+		width: 50%;
+		height: 100%;
+		z-index: 10;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 40px;
+	}
+	.container .box h2{
+		color: #fff;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	.container .box button{
+		cursor: pointer;
+		padding: 10px 20px;
+		background: #fff;
+		font-size: 16px;
+		font-weight: 500;
+		border: none;
+		outline: none;
+		border-radius: 20px
+	}
+	.formbox{
+		position: absolute;
+		left: 50px;
+		width: 350px;
+		height: 480px;
+		background-color: #fff;
+		z-index: 1000;
+		box-shadow: 0 5px 25px rgba(0,0,0,0.125);
+		transition: .5s;
+		transition-delay: .5s;
+		overflow: hidden;
+	}
+	.slide .formbox{
+		left: 400px;
+	}
+	.formbox .form{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .5s;
+		background-color: #fff;
+	}
+	.formbox .form.signupform{
+		top: 100%;
+		transition-delay: 0s;
+	}
+	.slide .formbox .form.signupform{
+		top: 0;
+		transition-delay: 0s;
+	}
+	.formbox .form.signinform{
+		top: 0;
+		transition-delay: 1s;
+	}
+	.slide .formbox .form.signinform{
+		top: -100%;
+		transition-delay: 0s;
+	}
+	.formbox .form form{
+		display: flex;
+		flex-direction: column;
+		padding: 0 50px;
+		width: 100%;		
+	}
+	.formbox .form form h3{
+		font-size: 1.4rem;
+		color: #333;
+		margin-bottom: 20px;
+		font-weight: 600;
+
+	}
+	.formbox .form form input{
+		width: 100%;
+		margin-bottom: 15px;
+		padding: 10px;
+		outline: none;
+		font-size: .8rem;
+		/* text-transform: uppercase; */
+		border: none;
+		border-bottom: 1px solid;
+		letter-spacing: 0.1em;
+	}
+	.formbox .form form input[type="submit"]
+	{
+		background: #03a9f4;
+		border: none;
+		cursor: pointer;
+		font-weight: 500;
+	}
+	.formbox .signupform form input[type="submit"]{
+		background: #f43648;
+	}
+	.forgot{
+		letter-spacing: .08em;
+		font-size: .8rem;
+		color: #333;
+	}
+	.logbtn{
+		position: absolute;
+		margin-top: 300px;
+		margin-right: 50px;
+		height: 50px;
+		width: 200px;
+		background: #03a9f4;
+		border: none;
+	}
+	.regbtn{
+		position: absolute;
+		margin-top: 400px;
+		margin-right: 30px;
+		height: 50px;
+		width: 200px;
+		background: #f43648;
+		border: none;
+	}
+#su-btn1{
+	z-index: 99;
+}
+/* #home{
+	font-size: 20px;
+} */
+</style>
+<body>
+<div class="container">
+	<div class="box signin">
+		<h2>Already have an account ? </h2>
+		<button class="signin-btn">SignIn</button>
+	</div>
+
+	<div class="box signup">
+		<h2>Don't have an account ? </h2>
+		<button class="signup-btn" >SignUp</button>
+	</div>
+
+	<div class="formbox">
+		<div class="form signinform">
+			<form>
+			<h3>SignIn</h3>
+			<input type="text" name="" placeholder="Enter Your Name" id="name1" onblur="Name1(),check6()">
+			<div id="date4"></div>
+			<input type="Password" name="" placeholder="Enter Your Password" id="password1" onblur="check7()">
+			<div id="stat2"></div>
+			<div id="date5"></div>
+			
+			<a href="#" class="forgot">Forgot Password</a>
+		</form>
+		<button onclick="check6(),check7()" class="logbtn">login</button>
+		</div>
+	
+	
+		<div class="form signupform">
+			<form>
+			<h3>SignUp</h3>
+			<input type="text" name="" placeholder="Enter Your Name" id="name" onblur="Name() " >
+			<div id="date"></div>
+			<input type="text" name="" placeholder="Enter Your Email" id="email" onblur="Email()" >
+			
+			<div id="date1"></div>
+			<input type="" name="" placeholder="Enter Your Password" id="password" onblur="state()">
+			<div id="stat"></div>
+			<div id="date2"></div>
+			<input type="" name="" placeholder="Confirm Password" id="valid" onblur="check5()" >
+			<div id="date3"></div>
+			
+		</form>
+		<input type="submit" value="Register" name="" id="su-btn1" onclick="validpass()" onblur="check2(),check3(),check4(),check5()" class="regbtn">
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	let signinBtn=document.querySelector('.signin-btn')
+	let signupBtn=document.querySelector('.signup-btn')
+	let body=document.querySelector('body')
+
+	 signupBtn.onclick = function(){
+		body.classList.add('slide')
+	}
+	 signinBtn.onclick = function(){
+	 	body.classList.remove('slide')
+	 }
+	let name=0 
+	let name1=0
+	let email=0
+	let password=0
+	let password2=0
+	let valid=0
+	function Name(){
+		name=document.querySelector('#name').value
+		console.log(name)
+		 check2()
+
+	
+	}
+	function Email(){
+		email=document.querySelector('#email').value
+		console.log(email)
+		check3()
+	}
+// 	function pass(){
+
+// 		password=document.querySelector('#password').value
+// console.log(password)
+// if( password.length<8){
+// 	alert("password must caintain 8 charters")
+// }
+// else if(!/[A-Z]/.test(password)){alert("Atleast 1 charecter must be Capitalize")}
+// else if(!/\d/.test(password)){alert("One of the charecter must be digit")}
+// else if(!/[@,!,#,$,%,^,&,*,(,),",',"]/.test(password)){alert("One of the charecter must be special symbol")
+	
+// }
+// check4()
+// 	}
+	function validpass(){
+		password=document.querySelector('#password').value
+		 valid=document.querySelector('#valid').value
+		 console.log(valid)
+if(password==0 && valid==0){
+	 alert("fields ate empty")
+}
+else	if(password===valid){
+alert('ragister Succesfully')
+// let su_btn1=document.getElementById('su-btn1')
+// su_btn1.style.display="none";
+window.open("index.html", "_blank");
+
+ }
+ else{
+     alert("password entry and confirm password entry canot match")
+ }
+ check5()
+	}
+// 	function check(){
+// 		 if(name==0 && email==0 && password==0 && valid==0){
+// 			// document.querySelector('#name').value="* reqired"
+			
+// 			// document.querySelector('#email').value="* reqired"
+// 			// document.querySelector('#password').value="* reqired"
+// 			// document.querySelector('#valid').value="* reqired"
+			
+// 		}
+// 		else if(email==0){
+
+// document.querySelector('#email').value="* reqired"
+// 		}
+// 		else if(password==0){
+// document.querySelector('#password').value="* reqired"
+// 		}
+// 		else if(valid==0){
+// document.querySelector('#valid').value="* reqired"
+// 		}
+	// 	else{
+			
+
+	//  }
+		//}
+		function check2(){
+			// let div=document.createElement('div')
+			// div.innerHTML="*required"
+			// document.getElementById('date').append(div)
+			let div=document.getElementById('date')
+			if(name==0){
+				
+				div.innerHTML="*required"
+				div.style.display = "block";
+				div.style.color = "red";
+			}
+			else{
+				div.style.display = "none";
+			}
+
+		}
+		// check8(){
+
+		// }
+		function check3(){
+			// let div=document.createElement('div')
+			// div.innerHTML="*required"
+			// document.getElementById('date').append(div)
+			let div1=document.getElementById('date1')
+			if(name==0){
+				
+				div1.innerHTML="*required"
+				div1.style.display = "block";
+				div1.style.color = "red";
+				
+			}
+			else{
+				div1.style.display = "none";
+			}
+
+		}
+		function check4(){
+			// let div=document.createElement('div')
+			// div.innerHTML="*required"
+			// document.getElementById('date').append(div)
+			let div2=document.getElementById('date2')
+			if(name==0){
+				
+				div2.innerHTML="*required"
+				div2.style.display = "block";
+				div2.style.color = "red";
+				
+			}
+			else{
+				div2.style.display = "none";
+			}
+
+		}
+		function check5(){
+			// let div=document.createElement('div')
+			// div.innerHTML="*required"
+			// document.getElementById('date').append(div)
+			let div2=document.getElementById('date3')
+			if(name==0){
+				
+				div2.innerHTML="*require"
+				div2.style.display = "block";
+				div2.style.color = "red";
+				
+			}
+			else{
+				div2.style.display = "none";
+			}
+
+		}
+		function state(){
+// 			let stat=document.getElementById('stat')
+			
+// 			if( password.length<8){
+// 	stat.innerHTML="password must caintain 8 charters"
+// }
+// else if(!/[A-Z]/.test(password)){stat.innerHTML="Atleast 1 charecter must be Capitalize"}
+// else if(!/\d/.test(password)){stat.innerHTML="One of the charecter must be digit"}
+// else if(!/[@,!,#,$,%,^,&,*,(,),",',"]/.test(password)){stat.innerHTML="One of the charecter must be special symbol"
+	
+// }function state() {
+    let password = document.querySelector('#password').value; 
+    let stat = document.getElementById('stat'); 
+    if (password.length < 8) {
+        stat.innerHTML = "Password must contain 8 characters";
+    } else if (!/[A-Z]/.test(password)) {
+        stat.innerHTML = "At least 1 character must be capitalized";
+    } else if (!/\d/.test(password)) {
+        stat.innerHTML = "One of the characters must be a digit";
+    } else if (!/[@,!,#,$,%,^,&,*,(,),",',"]/.test(password)) {
+        stat.innerHTML = "One of the characters must be a special symbol";
+    } else {
+        stat.innerHTML = ""; 
+    }check4()
+}
+
+function Name1(){
+		name1=document.querySelector('#name1').value
+		console.log(name1)
+		//  check2()
+		}	
+
+		function check6(){
+			// let div=document.createElement('div')
+			// div.innerHTML="*required"
+			// document.getElementById('date').append(div)
+			let div6=document.getElementById('date4')
+			if(name1==0){
+				
+				div6.innerHTML="*required"
+				div6.style.display = "block";
+				div6.style.color = "red";
+				
+			}
+			else{
+				div6.style.display = "none";
+				
+			}
+
+		}
+		function state2(){
+// 			let stat=document.getElementById('stat')
+			
+// 			if( password.length<8){
+// 	stat.innerHTML="password must caintain 8 charters"
+// }
+// else if(!/[A-Z]/.test(password)){stat.innerHTML="Atleast 1 charecter must be Capitalize"}
+// else if(!/\d/.test(password)){stat.innerHTML="One of the charecter must be digit"}
+// else if(!/[@,!,#,$,%,^,&,*,(,),",',"]/.test(password)){stat.innerHTML="One of the charecter must be special symbol"
+	
+// }function state() {
+     password2 = document.querySelector('#password1').value; 
+    let stat = document.getElementById('stat2');
+
+    if (password2.length < 8) {
+        stat2.innerHTML = "Password must contain 8 characters";
+    } else if (!/[A-Z]/.test(password2)) {
+        stat2.innerHTML = "At least 1 character must be capitalized";
+    } else if (!/\d/.test(password2)) {
+        stat2.innerHTML = "One of the characters must be a digit";
+    } else if (!/[@,!,#,$,%,^,&,*,(,),",',"]/.test(password2)) {
+        stat2.innerHTML = "One of the characters must be a special symbol";
+    } else {
+        stat2.innerHTML = ""; 
+    }
+}
+function check7(){
+	password2 = document.querySelector('#password1').value;
+	if(password2==0){
+				
+				date5.innerHTML="*required"
+				date5.style.display = "block";
+				date5.style.color = "red";
+				
+			}
+			else{
+				date5.style.display = "none";
+				window.location.href = "project2.html";
+			}
+}
+
+</script>
