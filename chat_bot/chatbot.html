@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    /* icon */
+    #bot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1123;
+    transition: transform 0.3s ease-in-out;
+
+}
+.text2{
+    position: fixed;
+    bottom: 80px;
+    font-size: 23px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* visibility: hidden; */
+    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+    z-index: 1123;
+    /* transition: transform 0.3s ease-in-out; */}
+#text{
+    position: fixed;
+    bottom: 80px;
+    font-size: 23px;
+    right: 40px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+    /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+    z-index: 1123;
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+#bot-button:hover {
+    transform: scale(1.1);
+}
+
+#bot-button span {
+    color: white;
+    font-size: 24px;
+}
+.bot-button2{
+    visibility: hidden;
+}
+/* #coco{
+    color: red;
+    background-color: red;
+} */
+       /* .....................Feed Back form............................... */
+       
+        .form-container {
+            width: 550px;
+            /* height: 600px; */
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-image: url('../img/backgroundchatbot.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1111;
+            visibility: hidden;
+            
+        }
+
+        /* Header styling */
+        .form-header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        /* Form content styling */
+        .form-content {
+            padding: 30px;
+        }
+
+        .form-content label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-content input,
+        .form-content textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-content textarea {
+            resize: none;
+        }
+
+        .form-content button {
+            width: 100%;
+            padding: 12px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-content button:hover {
+            background: #6a11cb;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+            }
+
+            .form-header {
+                font-size: 20px;
+            }
+
+            .form-content button {
+                font-size: 14px;
+            }
+        }
+</style>
+<style>
+    .koko{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        display: flex;
+        color: #ccc;
+    }
+
+    body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('../img/bg10.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #000000;
+            background-color: #e6f7ff;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .chatbot {
+            width: 550px;
+            height: 600px;
+            background: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background-image: url(../img/backgroundchatbot.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+       
+
+        .chat-header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-weight: bold;
+        }
+
+        .chat-content {
+            padding: 20px;
+            height: calc(100% - 140px);
+            overflow-y: auto;
+        }
+
+        .chat-input {
+            padding: 20px;
+            border-top: 1px solid #ccc;
+            background-color: transparent;
+            display: flex;
+            /* position: fixed; */
+
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .received {
+            background: #ebebeb;
+            align-self: flex-start;
+        }
+
+        .sent {
+            background: #6a11cb;
+            color: white;
+            align-self: flex-end;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #send-button {
+            background: #2575fc;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s ease;
+        }
+
+        #send-button:hover {
+            background: #6a11cb;
+        }
+</style>
+<body>
+    <div class="koko"><img src="../asseat_2/logo1.png" alt="" height="100px" width="100px"><h3>Enter a Disease Name</h3></div>
+    <div class="chatbot">
+
+        <div class="chat-header">
+            Chatbot
+            <button class="close-button" id="close-button" style="background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;">×</button>
+        </div>
+        <div class="chat-content" id="chat-content">
+            
+        </div>
+        <div class="chat-input" id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+<!-- icon -->
+ <div id="text2" class="text2"><h6>Add Chatbot Response/Feedback</h6></div>
+<div id="bot-button" class="bot-button1" onclick="feedopen()">
+    <span>💬</span>
+</div>
+<div id="text" class="text"><h6>Go TO Chat_Bot</h6></div>
+<div id="bot-button" class="bot-button2" onclick="feedclose()">
+    <span id="coco">💬</span>
+</div>
+<!-- feedback -->
+<div class="form-container">
+    <div class="form-header">
+        Add Chatbot Response
+        <button class="close-button" id="close-button" style="background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;" onclick="sumit
+        ()">×</button>
+    </div>
+    <div class="form-content">
+        <form action="insert.php" method="post">
+            <label for="user_message">User Message:</label>
+            <input type="text" id="user_message" name="user_message" required>
+
+            <label for="bot_response">Bot Response:</label>
+            <textarea id="bot_response" name="bot_response" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    function sumit(){
+        
+        document.querySelector('.form-container').style.visibility="hidden";
+        document.querySelector('.chatbot').style.visibility="visible";
+        document.querySelector('.bot-button2').style.visibility="hidden";
+        document.querySelector('.text').style.visibility="hidden";
+        document.querySelector('.text2').style.visibility="visible";
+        document.querySelector('.bot-button1').style.visibility="visible";
+ }
+ function feedopen(){
+    document.querySelector('.form-container').style.visibility="visible";
+    document.querySelector('.chatbot').style.visibility="hidden";
+    document.querySelector('.bot-button2').style.visibility="visible";
+    document.querySelector('.text').style.visibility="visible";
+    document.querySelector('.bot-button1').style.visibility="hidden";
+    document.querySelector('.text2').style.visibility="hidden";
+ }
+ function feedclose(){
+    document.querySelector('.bot-button2').style.visibility="hidden";
+    document.querySelector('.text').style.visibility="hidden";
+    document.querySelector('.bot-button1').style.visibility="visible";
+    document.querySelector('.form-container').style.visibility="hidden";
+        document.querySelector('.chatbot').style.visibility="visible";
+        document.querySelector('.text2').style.visibility="visible";
+ }
+</script>
+<script>
+    
+    document.getElementById('send-button').addEventListener('click', function() {
+            var userInput = document.getElementById('user-input').value;
+            if (userInput.trim() !== '') {
+                var chatContent = document.getElementById('chat-content');
+
+                var userMessageDiv = document.createElement('div');
+                userMessageDiv.classList.add('message', 'sent');
+                userMessageDiv.textContent = userInput;
+                chatContent.appendChild(userMessageDiv);
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "chatbot.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var botResponse = xhr.responseText;
+
+                        var botMessageDiv = document.createElement('div');
+                        botMessageDiv.classList.add('message', 'received');
+                        botMessageDiv.textContent = botResponse;
+                        chatContent.appendChild(botMessageDiv);
+
+                        document.getElementById('user-input').value = '';
+                        chatContent.scrollTop = chatContent.scrollHeight;
+                    }
+                };
+                xhr.send("message=" + encodeURIComponent(userInput));
+            }
+        });
+
+        document.getElementById('close-button').addEventListener('click', function() {
+            // document.querySelector('.chatbot').style.display="none";
+            window.open('../index.html', 'blank');
+        });
+</script>

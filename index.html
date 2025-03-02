@@ -1,0 +1,1224 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==title========================-->
+    <title>MEDIACAL DIAGNOSTIC SYSTEM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--==CSS==========================-->
+    <link rel="stylesheet" href="data/index.css">
+    <link rel="stylesheet" href="data/chatbot.css">
+    <script src="data/add.js"></script>
+
+    <!--==Fav-icon=====================-->
+    <link rel="shortcut icon" href="images/fav-icon1.png">
+
+    <!-----font awesome--------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--Link Swiper's CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="asseat_2/data2.js"></script>
+    <link rel="stylesheet" href="asseat_2/style2.css">
+</head>
+
+<body>
+    <!--  Bot-->
+    <nav class="navigation col-12">
+        <a href="#" class="logo"><img src="asseat_2/logo1.png" alt="" height="120px" width="200px"></a>
+        <div>
+            <ul class="menu">
+                <li><a href="#our-team" class="an">Find A Doctor</a></li>
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#testimonials">Testimonial's</a></li>
+            </ul>
+        </div>
+        <select name="" id="hara" onchange="lag1()" class="nav-appointment-btn">
+            <option value="eng">English</option>
+            <option value="mar">मराठी</option>
+        </select>
+        <a href="../marathi/index.html"></a>
+        <div> <select name="" id="kaka" class="nav-appointment-btn kaka" onchange="nana()">
+            <option value="null"  disabled selected>validation</option>
+                <option value="login">Registration/Login</option>
+                <option value="admin">Admin</option>
+            </select>
+            <!-- <a href="signup.html" class="nav-appointment-btn">Registration/Login</a>  -->
+
+        </div>
+
+    </nav>
+    <div class="hero-content container-fluid">
+        <div class="hero-text">
+            <h1>We <span id="provide">Provide </span>The <span id="provide">Best</span> HealthCare</h1>
+            <p>Our superspecialist doctors provide the highest quality of care through a team-based, doctor-consult
+                model.</p>
+            <!-------btns----->
+            <div class="hero-text-btns" id="gov">
+                <a href="book/book.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Make Appointment</a>
+                <a href="chat_bot/chatbot.html">
+                    <i class="fa-solid fa-check"></i>
+                    Chat with Ai</a>
+            </div>
+        </div>
+        <!--------img-->
+        <div class="hero-img">
+            <img src="asseat_2/DOCT_1.png">
+        </div>
+    </div>
+
+    <!----------hero end------>
+
+
+
+    <!-----------search----------->
+    <div class="appointment-search-container">
+        <h3>Find Best HealthCare</h3>
+        <!----------search---------->
+        <div class="appointment-search">
+            <!---------search box-------->
+            <div class="appo-search-box form-control">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <select id="district-select">
+                    <option value="null" selected disabled>Select a Near by district</option>
+                    <option value="Nandurbar">Nandurbar</option>
+                    <option value="Ahmednagar">Ahmednagar</option>
+                    <option value="Akola">Akola</option>
+                    <option value="Amravati">Amravati</option>
+                    <option value="Beed">Beed</option>
+                    <option value="Bhandara">Bhandara</option>
+                    <option value="Buldhana">Buldhana</option>
+                    <option value="Chandrapur">Chandrapur</option>
+                    <option value="Dhule">Dhule</option>
+                    <option value="Gadchiroli">Gadchiroli</option>
+                    <option value="Gondia">Gondia</option>
+                    <option value="Hingoli">Hingoli</option>
+                    <option value="Jalgaon">Jalgaon</option>
+                    <option value="Jalna">Jalna</option>
+                    <option value="Kolhapur">Kolhapur</option>
+                    <option value="Latur">Latur</option>
+                    <option value="Mumbai City">Mumbai City</option>
+                    <option value="Mumbai Suburban">Mumbai Suburban</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nanded">Nanded</option>
+                    <option value="Nashik">Nashik</option>
+                    <option value="Dharashiv">Dharashiv</option>
+                    <option value="Palghar">Palghar</option>
+                    <option value="Parbhani">Parbhani</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Raigad">Raigad</option>
+                    <option value="Ratnagiri">Ratnagiri</option>
+                    <option value="Sangli">Sangli</option>
+                    <option value="Satara">Satara</option>
+                    <option value="Sindhudurg">Sindhudurg</option>
+                    <option value="Solapur">Solapur</option>
+                    <option value="Thane">Thane</option>
+                    <option value="Wardha">Wardha</option>
+                    <option value="Washim">Washim</option>
+                    <option value="Yavatmal">Yavatmal</option>
+                    <option value="Sambhajinagar">Sambhajinagar</option>
+                </select>
+
+            </div>
+            <!---------search box-------->
+            <div class="appo-search-box" onclick="redirectToHospital()">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Hospitals Location / Contact NO" class="hi" id="contact">
+            </div>
+            <!---------btn--------->
+            <button onclick="redirectToHospital()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+    <!-----------search end---------->
+
+    <!-----------what we provide-------->
+    <section class="what-we-provide">
+
+        <!---------box1--------->
+        <div class="w-info-box w-info-box1">
+            <!----icon------>
+            <div class="w-info-icon">
+                <i class="fa-solid fa-capsules"></i>
+            </div>
+            <!---------text---------->
+            <div class="w-info-text">
+                <strong>Specialised Services</strong>
+                <p>Pocket Friendly Drugs</p>
+            </div>
+        </div>
+        <!---------box2--------->
+        <div class="w-info-box w-info-box2">
+            <!----icon------>
+            <div class="w-info-icon">
+                <i class="fa-regular fa-comment"></i>
+            </div>
+            <!---------text---------->
+            <div class="w-info-text">
+                <strong>24/7 Advanced Care</strong>
+                <p>support allows for immediate intervention</p>
+            </div>
+        </div>
+        <!---------box3--------->
+        <div class="w-info-box w-info-box3">
+            <!----icon------>
+            <div class="w-info-icon">
+                <i class="fa-solid fa-square-poll-horizontal"></i>
+            </div>
+            <!---------text---------->
+            <div class="w-info-text">
+                <strong>Get Result Online</strong>
+                <p>Online Health Monitoring</p>
+            </div>
+        </div>
+
+    </section>
+    <!-----------------our services-------------->
+    <section id="our-services">
+
+        <!-----------heading------------->
+        <div class="services-heading">
+            <!-------text----->
+            <div class="services-heading-text">
+                <strong>Our Services</strong>
+                <h2>High Quality Services For You</h2>
+            </div>
+            <!----btns------>
+            <div class="services-slide-btns">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+        <!-- ...............................................hi..................................... -->
+        <!----------box container----------->
+        <div class="services-box-container">
+
+            <!-- Swiper -->
+            <div class="swiper mySwiperservices">
+                <div class="swiper-wrapper">
+
+                    <!---slide-1-->
+                    <div class="swiper-slide">
+                        <!--------box------>
+                        <div class="services-box s-box1">
+                            <!---icon---->
+                            <i class="fa-solid fa-head-side-cough"></i>
+                            <!------title----->
+                            <strong>Cough</strong>
+                            <!-----details---->
+                            <p>we check the best for you. let's deal with your problem before it get worse. help
+                                yourself to find good doctor.</p>
+                            <!--btn-->
+                            <button onclick="askTypeOfCough(); msp();" class="ask">ASK</button>
+                        </div>
+
+                    </div><!---slide end--->
+
+                    <!---slide-2-->
+                    <div class="swiper-slide">
+                        <!--------box------>
+                        <div class="services-box s-box2">
+                            <!---icon---->
+                            <i class="fa-solid fa-snowflake"></i>
+                            <!------title----->
+                            <strong>cold</strong>
+                            <!-----details---->
+                            <p>Sugar is best for test but not for your health we will help you to cure your problem you
+                                help yourself to find us.</p>
+                            <!--btn-->
+                            <button onclick="askTypeOfCold(); msp();" class="ask">ASK</button>
+                        </div>
+
+                    </div><!---slide end--->
+
+                    <!---slide-3-->
+                    <div class="swiper-slide">
+                        <!--------box------>
+                        <div class="services-box s-box3">
+                            <!---icon---->
+                            <i class="fa-solid fa-thermometer"></i>
+                            <!------title----->
+                            <strong>Fever</strong>
+                            <!-----details---->
+                            <p>We will take care your heart wisely heart is the best part of our body. don't let it slip
+                                from your body.</p>
+                            <!--btn-->
+                            <button onclick="askTypeOfFever(); msp();" class="ask">ASK</button>
+                        </div>
+
+                    </div><!---slide end--->
+
+                </div><!------wrapper-end----->
+            </div><!------swipper-end----->
+
+        </div>
+        <!---container end---->
+
+        <!---btn---->
+        <span class="service-help-btn">Contact Us For Need Any Help And Services<a href="#"> Let's Get
+                Started</a></span>
+
+    </section>
+    <!---==============--services end------------------------------->
+
+
+    <!-----------------why choose us---------------------->
+    <section id="why-choose-us">
+
+        <!--*left-->
+          <!--*left-->
+          <div class="why-choose-us-left">
+            <h3>Healthcare Center Locator</h3>
+    <div class="container">
+        <label for="typeSelect">Select Type:</label>
+    <select id="typeSelect">
+        <option value="" disabled selected>Choose a type</option>
+        <option value="scan">Scan Center</option>
+        <option value="blood">Blood Test Center</option>
+    </select>
+
+        <label for="districtSelect">Select a District:</label>
+    <select id="districtSelect">
+        <option value="" disabled selected>Choose a district</option>
+        <optgroup label="Scan Centers">
+            <!-- Same list as Scan Centers -->
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Thane">Thane</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Raigad">Raigad</option>
+            <option value="Sindhudurg">Sindhudurg</option>
+            <option value="Ratnagiri">Ratnagiri</option>
+            <option value="Satara">Satara</option>
+            <option value="Sangli">Sangli</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Beed">Beed</option>
+            <option value="Latur">Latur</option>
+            <option value="Osmanabad">Osmanabad</option>
+            <option value="Nanded">Nanded</option>
+            <option value="Parbhani">Parbhani</option>
+            <option value="Jalna">Jalna</option>
+            <option value="Hingoli">Hingoli</option>
+            <option value="Akola">Akola</option>
+            <option value="Amravati">Amravati</option>
+            <option value="Buldhana">Buldhana</option>
+            <option value="Washim">Washim</option>
+            <option value="Yavatmal">Yavatmal</option>
+            <option value="Wardha">Wardha</option>
+            <option value="Chandrapur">Chandrapur</option>
+            <option value="Gadchiroli">Gadchiroli</option>
+            <option value="Bhandara">Bhandara</option>
+            <option value="Gondia">Gondia</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Dhule">Dhule</option>
+            <option value="Nandurbar">Nandurbar</option>
+            <option value="Ahmednagar">Ahmednagar</option>
+        </optgroup>
+        <optgroup label="Blood Test Centers">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Thane">Thane</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Raigad">Raigad</option>
+            <option value="Sindhudurg">Sindhudurg</option>
+            <option value="Ratnagiri">Ratnagiri</option>
+            <option value="Satara">Satara</option>
+            <option value="Sangli">Sangli</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Beed">Beed</option>
+            <option value="Latur">Latur</option>
+            <option value="Osmanabad">Osmanabad</option>
+            <option value="Nanded">Nanded</option>
+            <option value="Parbhani">Parbhani</option>
+            <option value="Jalna">Jalna</option>
+            <option value="Hingoli">Hingoli</option>
+            <option value="Akola">Akola</option>
+            <option value="Amravati">Amravati</option>
+            <option value="Buldhana">Buldhana</option>
+            <option value="Washim">Washim</option>
+            <option value="Yavatmal">Yavatmal</option>
+            <option value="Wardha">Wardha</option>
+            <option value="Chandrapur">Chandrapur</option>
+            <option value="Gadchiroli">Gadchiroli</option>
+            <option value="Bhandara">Bhandara</option>
+            <option value="Gondia">Gondia</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Dhule">Dhule</option>
+            <option value="Nandurbar">Nandurbar</option>
+            <option value="Ahmednagar">Ahmednagar</option>
+        </optgroup>
+    </select>
+<br>
+<div class="op"><button onclick="openLocation()" class="btn1">Open Location in Maps</button></div>
+    
+    </div>
+   
+            <!--==btn========-->
+            
+        </div><!--left-end-->
+
+        <!--*right-->
+        <div class="why-choose-us-right">
+            <h3>Emergency?<br />
+                Contact Us
+            </h3>
+            <p>even when other will not support you we will be there to help you. don't worry about time, money,
+                condition we are there to help you in any condition you will be</p>
+            <!--==container====-->
+            <div class="w-right-contact-container">
+                <!--*box*-->
+                <div class="w-right-contact-box">
+                    <!----icon---->
+                    <i class="fa-solid fa-phone"></i>
+                    <!--text-->
+                    <div class="w-right-contact-box-text">
+                        <span>Call Us Now</span>
+                        <strong>+91 123-456-789</strong>
+                    </div>
+                </div>
+                <!--*box*-->
+                <div class="w-right-contact-box">
+                    <!----icon---->
+                    <i class="fa-solid fa-envelope"></i>
+                    <!--text-->
+                    <div class="w-right-contact-box-text">
+                        <span>Mail Us</span>
+                        <strong>ग्रामीणHEALTHGUARD@gmail.com</strong>
+                </div>
+            </div>
+        </div><br><a href="book/book.html" class="why-choose-us-btn">Make Appointment</a>
+        <!---------container end--------->
+        </div><!--right-end-->
+
+    </section>
+    <!-------------------------team-end-------------->
+
+
+    <!--==Testimonials======------------->
+    <section id="testimonials">
+
+        <!--**heading--------------->
+        <div class="testimonials-heading">
+            <h3>Our Patients FeedBack About Us</h3>
+            <p>those who already got our services will not lie to you. we have the best health care prediction as well
+                treatment so that is why you can take feedbacks from our previous patients</p>
+        </div>
+
+        <!--*testimonials-Content*-->
+        <div class="testimonials-content">
+
+            <!--**img---------->
+            <div class="testimonials-img">
+                <img src="asseat_2/grandma.avif">
+            </div>
+
+            <!--*box-container*-->
+            <div class="testimonials-box-container">
+
+                <!-- Swiper -->
+                <div class="swiper mySwipertesti">
+                    <div class="swiper-wrapper">
+                        <!--*1-->
+                        <div class="swiper-slide">
+                            <!--*box*-->
+                            <div class="testimonials-box">
+                                <!--profile-->
+                                <div class="t-profile">
+                                    <!--img-->
+                                    <div class="t-profile-img">
+                                        <img alt="" src="asseat_2/review.jpg">
+                                    </div>
+                                    <!--text-->
+                                    <div class="t-profile-text">
+                                        <strong>SUMIT MALI</strong>
+                                        <span>From Dhule</span>
+                                        <div class="t-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--feedback-->
+                                <p>Just superb! Reaching out to an online searched hospital in Delhi to become one of my
+                                    best care centers, Kailash Deepak Hospital is fabulous I jot down here. I would</p>
+                            </div><!--box-end-->
+                        </div><!--slide-end-->
+
+                        <!--*2-->
+                        <div class="swiper-slide">
+                            <!--*box*-->
+                            <div class="testimonials-box">
+                                <!--profile-->
+                                <div class="t-profile">
+                                    <!--img-->
+                                    <div class="t-profile-img">
+                                        <img alt="" src="asseat_2/review.jpg">
+                                    </div>
+                                    <!--text-->
+                                    <div class="t-profile-text">
+                                        <strong>S. J. VAID</strong>
+                                        <span>From Pune</span>
+                                        <div class="t-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--feedback-->
+                                <p>The patient-friendly care that doctors provide here is something more than I ever
+                                    would have thought. From nurses to paramedical staff everyone works as a team. I
+                                    would love to recommend the hospital to others</p>
+                            </div><!--box-end-->
+                        </div><!--slide-end-->
+
+                        <!--*3-->
+                        <div class="swiper-slide">
+                            <!--*box*-->
+                            <div class="testimonials-box">
+                                <!--profile-->
+                                <div class="t-profile">
+                                    <!--img-->
+                                    <div class="t-profile-img">
+                                        <img alt="" src="asseat_2/review.jpg">
+                                    </div>
+                                    <!--text-->
+                                    <div class="t-profile-text">
+                                        <strong>SHIVANGI KAUR</strong>
+                                        <span>From Bihar</span>
+                                        <div class="t-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--feedback-->
+                                <p>It was good experience. The staff, doctor was good. The dealing of the patient is
+                                    also good. I am satisfied.</p>
+                            </div><!--box-end-->
+                        </div><!--slide-end-->
+
+                    </div><!--wrapper-end-->
+                    <div class="swiper-pagination"></div>
+                </div><!--swiper-end-->
+
+            </div><!--container-end-->
+
+        </div><!--content-end-->
+
+    </section>
+
+    <footer>
+        <div class="footer-container" style="width: 100%;">
+            <!--*comoany-box*-->
+            <div class="footer-company-box">
+                <!--logo-->
+                <a href="../chatbase/index.html" class="logo">
+                    <div class="op">
+                        <img alt="" src="asseat_2/logo1.png" height="100px" width="150px">
+                    </div> <span id="gra" id="product">ग्रामीण HEALTH GUARD</span>
+                </a>
+                <!--details-->
+                <p>“A tremendous amount of needless pain and suffering can be eliminated by ensuring that health
+                    insurance is universally available.” </p>
+                <!--social-box-->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-----company box-end------->
+
+            <!--*link-box-->
+            <div class="footer-link-box">
+                <strong>Main Link's</strong>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#our-story">About</a></li>
+                    <li><a href="#why-choose-us">Contact</a></li>
+                    <li><a href="#our-services">Services</a></li>
+                    <li><a href="#testimonials">Feedback</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!------container end-------->
+
+        <!------------------*bottom------------->
+        <div class="footer-bottom">
+            <span class="footer-owner">ग्रामीण HEALTH GUARD</span>
+            <span class="copyright"> @Copyright 2025-2026</span>
+        </div>
+    </footer>
+
+
+    <div id="bot-button">
+        <span>💬</span>
+    </div>
+
+    <div id="chatbot" class="chatbot">
+        <div class="chat-header">
+            Chatbot
+            <button class="close-button" id="close-button"
+                style="background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;">×</button>
+        </div>
+        <div class="chat-content" id="chat-content"></div>
+        <div class="chat-input" id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+
+        const botButton = document.getElementById("bot-button");
+        const closeButton = document.getElementById("close-button");
+        const chatContent = document.getElementById("chat-content");
+        const sendButton = document.getElementById("send-button");
+        const userInput = document.getElementById("user-input");
+
+        let isInitialInteraction = true;
+        let selectedOption = null;
+        let selectedType = null;
+        let selectedMedicineType = null;
+        let userAge = null;
+
+        // Open chatbot
+        botButton.addEventListener("click", () => {
+            console.log("Chatbot button clicked!");  // Debugging line
+            chatbot.classList.add("open");
+            botButton.style.display = "none";
+        });
+        function msp() {
+            console.log("Chatbot button clicked!");  // Debugging line
+            chatbot.classList.add("open");
+            botButton.style.display = "none";
+
+        }
+
+        // Close chatbot
+        closeButton.addEventListener("click", () => {
+            chatbot.classList.remove("open");
+            botButton.style.display = "flex";
+        });
+
+        // Add messages to chat
+        sendButton.addEventListener("click", () => {
+            const userMessage = userInput.value.trim();
+            if (!userMessage) return;
+
+            // Add user message
+            const userMessageDiv = document.createElement("div");
+            userMessageDiv.classList.add("message", "sent");
+            userMessageDiv.textContent = userMessage;
+            chatContent.appendChild(userMessageDiv);
+
+            // Reset input field
+            userInput.value = "";
+
+            // Handle chatbot response
+            setTimeout(() => {
+                if (isInitialInteraction) {
+                    askAge();
+                    isInitialInteraction = false;
+                } else if (!userAge) {
+                    handleAgeValidation(userMessage);
+                } else if (!selectedOption) {
+                    handleInitialOption(userMessage);
+                } else if (!selectedType) {
+                    handleTypeOption(userMessage);
+                } else if (!selectedMedicineType) {
+                    handleMedicineType(userMessage);
+                } else {
+                    showMedicineSuggestions(); // Once medicine suggestions are displayed, reset
+                    resetState();  // Reset state to start a new cycle
+                }
+            }, 500);
+        });
+
+        // Ask for user's age
+        function askAge() {
+            const botMessage = "Please enter your age:";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.textContent = botMessage;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        // Handle age validation
+        function handleAgeValidation(userMessage) {
+            const age = parseInt(userMessage);
+            if (isNaN(age) || age <= 0 || age > 120) {
+                showErrorMessage("Please enter a valid age between 1 and 120.");
+            } else {
+                userAge = age;
+                showInitialOptions();
+            }
+        }
+
+        function showInitialOptions() {
+            const botMessage = "Please select an option:<br>1. Fever<br>2. Cold<br>3. Cough<br>4. If you need any other help";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.innerHTML = botMessage; // using innerHTML for better formatting
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function handleInitialOption(userMessage) {
+            if (userMessage === "1" || userMessage.toLowerCase() === "fever") {
+                selectedOption = "fever";
+                askTypeOfFever();
+            } else if (userMessage === "2" || userMessage.toLowerCase() === "cold") {
+                selectedOption = "cold";
+                askTypeOfCold();
+            } else if (userMessage === "3" || userMessage.toLowerCase() === "cough") {
+                selectedOption = "cough";
+                askTypeOfCough();
+            } else if (userMessage === "4" || userMessage.toLowerCase() === "if you need any other help") {
+
+                window.location.href = "chat_bot/chatbot.html";
+            } else {
+                showErrorMessage("Invalid option. Please select 1, 2, 3, or 4");
+            }
+        }
+
+        function askTypeOfFever() {
+            selectedOption = 1;
+            userAge = 12;
+            selectedOption = "fever";
+            const botMessage = "What type of fever? <br>1. Viral Fever<br>2. Fever due to sun exposure<br>3. Fever due to mosquito exposure <br>4. Fever due to vaccination";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.innerHTML = botMessage; // using innerHTML for better formatting
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function askTypeOfCold() {
+            const botMessage = "What type of cold? <br>1. Runny Nose<br>2. Nasal Congestion<br>3. Sneezing";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.innerHTML = botMessage;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function askTypeOfCough() {
+            const botMessage = "What type of cough?<br> 1. Dry Cough <br>2. Wet Cough <br>3. Whooping Cough";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.innerHTML = botMessage;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function askTypeOfhelp() {
+            window.location.href = "try2.html";
+        }
+
+        function handleTypeOption(userMessage) {
+            const validTypes = ["1", "2", "3", "4"];
+
+            if (validTypes.includes(userMessage)) {
+                selectedType = userMessage;
+                askMedicineType();
+            } else {
+                showErrorMessage("Invalid option. Please select a valid type.");
+            }
+        }
+
+        function askMedicineType() {
+            const botMessage = "What type of medicine would you like? <br>1. Antibiotic <br>2. Homemade";
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.innerHTML = botMessage;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function handleMedicineType(userMessage) {
+            if (userMessage === "1" || userMessage.toLowerCase() === "antibiotic") {
+                selectedMedicineType = "antibiotic";
+                showMedicineSuggestions();
+            } else if (userMessage === "2" || userMessage.toLowerCase() === "home remedies") {
+                selectedMedicineType = "homemade";
+                showMedicineSuggestions();
+            } else {
+                showErrorMessage("Invalid option. Please select 1 or 2.");
+            }
+        }
+function showMedicineSuggestions() {
+    let botMessage = "";
+
+    // Fever Suggestions
+    if (selectedOption === "fever") {
+        if (selectedType === "1") { // Viral Fever
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Viral Fever:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are generally not effective for viral infections.these are the most common gov approve antibitics use 2 dosages a day if you don't get any result after a dosage then go to your nearby gov hospital</li>
+                    <li><b>For Symptom Relief:</b>
+                        <ul>
+                            <li>Paracetamol (500mg) – Fever and body aches</li>
+                            <li>Ibuprofen – Anti-inflammatory (if prescribed)</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Viral Fever:if you don't get any relief from that then go to your nearby gov hospital</b><br>
+                <ul>
+                    <li>Apply <b>warm compresses</b> on the forehead.</li>
+                    <li>Drink <b>ginger tea</b> with honey to reduce discomfort.</li>
+                    <li>Stay hydrated with <b>water</b>, <b>coconut water</b>, or <b>herbal teas</b>.</li>
+                </ul>
+                `;
+            }
+        } else if (selectedType === "2") { // Fever due to Sun Exposure
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Fever Due to Sun Exposure:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are not typically needed for this type of fever.</li>
+                    <li><b>For Symptom Relief:these are the most common gov approve antibitics use 2 dosages a day if you don't get any result then go to your nearby gov hospital</b>
+                        <ul>
+                            <li>Paracetamol – For temperature control</li>
+                            <li>Ibuprofen – For pain and inflammation</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Fever Due to Sun Exposure:if you don't get any result ina day then goto nearby hospital it somthing serious</b><br>
+                <ul>
+                    <li>Take a <b>cool bath</b> to lower body temperature.</li>
+                    <li>Drink <b>coconut water</b> or <b>lime water</b> to replenish electrolytes.</li>
+                    <li>Apply <b>aloe vera gel</b> for cooling skin burns.</li>
+                </ul>
+                `;
+            }
+        } else if (selectedType === "3") { // Fever due to Mosquito Exposure
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Fever Due to Mosquito Exposure:don't take this medicine more than a 1 dy go do your nearby gov hospital.</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are not the first line of treatment unless prescribed for secondary infections like typhoid.</li>
+                    <li><b>Medications:</b>
+                        <ul>
+                            <li>Paracetamol – To control fever</li>
+                            <li>Avoid aspirin or NSAIDs if suspected dengue fever</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Fever Due to Mosquito Exposure:</b><br>
+                <ul>
+                    <li>Drink <b>papaya leaf extract</b> for suspected dengue fever (after consulting a doctor).</li>
+                    <li>Stay hydrated with <b>ORS solutions</b> or <b>fruit juices</b>.</li>
+                    <li>Rest and avoid mosquito exposure by using repellents or nets.</li>
+                </ul>
+                `;
+            }
+        } else if (selectedType === "4") { // Fever due to Vaccination
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Fever Due to Vaccination:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are not needed for post-vaccination fever.</li>
+                    
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Fever Due to Vaccination:Don't take any stress it's normal bheviour of body after vaccination</b><br>
+                <ul>
+                    <li>Apply a <b>cold compress</b> on the injection site for swelling and pain.</li>
+                    <li>Drink <b>plenty of fluids</b> to stay hydrated.</li>
+                    <li>Get adequate <b>rest</b> to allow your body to recover.</li>
+                </ul>
+                `;
+            }
+        }
+    }
+
+    // Cold Suggestions
+    else if (selectedOption === "cold") {
+        if (selectedType === "1") { // Runny Nose
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Runny Nose:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are only needed for bacterial infections. these are the most common gov approve antibitics use 2 dosages a day if you don't get any result then go to your nearby gov hospital</li>
+                    <li><b>Medications:</b>
+                        <ul>
+                            <li>Amoxicillin</li>
+                            <li>Azithromycin</li>
+                            <li>Cefuroxime</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Runny Nose:</b><br>
+                <ul>
+                    <li>Perform <b>steam inhalation</b> with eucalyptus oil.</li>
+                    <li>Use a <b>saline nasal spray</b> to clear nasal passages.</li>
+                    <li>Drink <b>honey and lemon water</b> for soothing effects.</li>
+                </ul>
+                `;
+            }
+        } else if (selectedType === "2") { // Nasal Congestion
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Nasal Congestion:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are usually not needed unless there's a bacterial infection.Use nasal spray insted use only for 2day's after that you don't take any result then go to your nearby hospital</li>
+                    <li><b>Medications:</b>
+                        <ul>
+                            <li>Pseudoephedrine (Decongestant)</li>
+                            <li>Oxymetazoline nasal spray</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Nasal Congestion:</b><br>
+                <ul>
+                    <li>Perform <b>steam inhalation</b> with menthol or eucalyptus.</li>
+                    <li>Drink <b>warm herbal teas</b> or <b>chicken soup</b>.</li>
+                    <li>Use a <b>humidifier</b> to add moisture to the air.</li>
+                </ul>
+                `;
+            }
+        }
+        // Add Sneezing (type 3) as needed
+        else if (selectedType === "3") { // Sneezing
+                    if (selectedMedicineType === "antibiotic") {
+                        botMessage = "For sneezing caused by allergies or infection, these are the most common gov approve antibitics use 2 dosages a day if you don't get any result then go to your nearby gov hospital<br>" +
+                            "1. Cetirizine (Antihistamine)<br>2. Loratadine (Antihistamine)";
+                    } else if (selectedMedicineType === "homemade") {
+                        botMessage = "For sneezing, try these home remedies:<br>" +
+                            "1. Warm salt water gargle<br>2. Steam inhalation with menthol or eucalyptus oil<br>3. Ginger tea";
+                    }
+                }
+    }
+
+    // Cough Suggestions
+    else if (selectedOption === "cough") {
+        if (selectedType === "1") { // Dry Cough
+            if (selectedMedicineType === "antibiotic") {
+                botMessage = `
+                <b>Suggestions for Dry Cough:</b><br>
+                <ul>
+                    <li><b>Note:</b> Antibiotics are usually not required for dry cough You need Menthol supressants.use 2 dosages a day if you don't get any result then go to your nearby gov hospital</li>
+                    <li><b>Medications:</b>
+                        <ul>
+                            <li>Dextromethorphan (Cough suppressant common for all)</li>
+                            <li>Codeine (only if prescribed)</li>
+                        </ul>
+                    </li>
+                </ul>
+                `;
+            } else if (selectedMedicineType === "homemade") {
+                botMessage = `
+                <b>Home Remedies for Dry Cough:</b><br>
+                <ul>
+                    <li>Drink <b>honey and warm water</b> to soothe the throat.</li>
+                    <li>Try <b>ginger tea</b> for anti-inflammatory effects.</li>
+                    <li>Perform <b>steam inhalation</b> to reduce irritation.</li>
+                </ul>
+                `;
+            }
+        } else if (selectedType === "2") { // Wet Cough
+                    if (selectedMedicineType === "antibiotic") {
+                        botMessage = "For wet cough (productive cough), antibiotics may be prescribed if there is a bacterial infection. You can try if you don't get any result then go to your nearby gov hospital:<br>" +
+                            "1. Amoxicillin<br>2. Doxycycline";
+                    } else if (selectedMedicineType === "homemade") {
+                        botMessage = "For wet cough, try these home remedies:<br>" +
+                            "1. Ginger tea with honey<br>2. Steam inhalation with menthol<br>3. Drinking plenty of warm fluids";
+                    }
+                } else if (selectedType === "3") { // Whooping Cough
+                    if (selectedMedicineType === "antibiotic") {
+                        botMessage = "For whooping cough, antibiotics may be prescribed, such as:these are the most common gov approve antibitics use 2 dosages a day if you don't get any result then go to your nearby gov hospital<br>" +
+                            "1. Azithromycin<br>2. Erythromycin";
+                    } else if (selectedMedicineType === "homemade") {
+                        botMessage = "For whooping cough, you can try:<br>" +
+                            "1. Honey with warm water<br>2. Warm salt water gargles<br>3. Drinking herbal teas like peppermint";
+                    }
+                }
+       // Add Wet Cough and Whooping Cough similarly
+    }
+
+    // Display the message
+    const botMessageDiv = document.createElement("div");
+    botMessageDiv.classList.add("message", "received");
+    botMessageDiv.innerHTML = botMessage; // Enhanced formatting
+    chatContent.appendChild(botMessageDiv);
+    chatContent.scrollTop = chatContent.scrollHeight;
+
+    // Reset state after showing suggestions
+    resetState();
+}
+
+
+        // Function to show error messages
+        function showErrorMessage(message) {
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.classList.add("message", "received");
+            botMessageDiv.textContent = message;
+            chatContent.appendChild(botMessageDiv);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        // Reset state
+        function resetState() {
+            isInitialInteraction = true;
+            selectedOption = null;
+            selectedType = null;
+            selectedMedicineType = null;
+            userAge = null;
+        }
+
+    </script>
+
+    <!---------------footer-------->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+
+        var swiper = new Swiper(".mySwiperservices", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                700: {
+
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+
+        var swiper = new Swiper(".mySwiperteam", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+
+                560: {
+
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                950: {
+
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1250: {
+
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        var swiper = new Swiper(".mySwipertesti", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+
+
+        const registrationForm = document.getElementById('registrationForm');
+        const loginForm = document.getElementById('loginForm');
+
+        function showLoginForm() {
+            registrationForm.classList.add('slide-out');
+            setTimeout(() => {
+                registrationForm.classList.add('d-none');
+                loginForm.classList.remove('d-none');
+                loginForm.classList.add('slide-in');
+                registrationForm.classList.remove('slide-out', 'slide-in');
+            }, 500);
+        }
+
+        function showRegistrationForm() {
+            loginForm.classList.add('slide-out');
+            setTimeout(() => {
+                loginForm.classList.add('d-none');
+                registrationForm.classList.remove('d-none');
+                registrationForm.classList.add('slide-in');
+                loginForm.classList.remove('slide-out', 'slide-in');
+            }, 500);
+        }
+    </script>
+    <script>
+        function getLocation(type, district) {
+            let location = null;
+
+            // Scan Centers
+            if (type === "scan") {
+                const scanLocations = {
+                    Mumbai: "https://maps.app.goo.gl/RFTsMHuk1Z2yNM829",
+                    Pune: "https://maps.app.goo.gl/smsQmVkTUsmg7Yeo8",
+                    Thane: "https://maps.app.goo.gl/jvUdofUCa79A6wAn8",
+                    Nagpur: "https://maps.app.goo.gl/mVJvZangt8drzNKc6",
+                    Nashik: "https://maps.app.goo.gl/emN1WmT97K3sbx5CA",
+                    Raigad: "https://maps.app.goo.gl/pS3nChXeW5Xj9PvN9",
+                    Sindhudurg: "https://maps.app.goo.gl/dndeYLZLMpGxrVkK6",
+                    Ratnagiri: "https://maps.app.goo.gl/VebaXGC5r5nL9P3i7",
+                    Satara: "https://maps.app.goo.gl/Xb2rwYaFpYv3ukxG7",
+                    Sangli: "https://maps.app.goo.gl/9vpjG9DBx7iQRLKD8",
+                    Kolhapur: "https://maps.app.goo.gl/DLDY5pCLWHaYkHFF7",
+                    Solapur: "https://maps.app.goo.gl/g7GeAxZYL98WuEuTA",
+                    Aurangabad: "https://maps.app.goo.gl/6cgtSMGpMjPeUhNQA",
+                    Beed: "https://maps.app.goo.gl/ZPfKrV5WYHENBrAa9",
+                    Latur: "https://maps.app.goo.gl/vabtHWHR2FDwTMox9",
+                    Osmanabad: "https://maps.app.goo.gl/D54a2hio4xbQtyZGA",
+                    Nanded: "https://maps.app.goo.gl/9mHbeCuaYCkHjBgm9",
+                    Parbhani: "https://maps.app.goo.gl/wbJEi64WPZFTUNaR7",
+                    Jalna: "https://maps.app.goo.gl/5T2nXXoYFgHVGUD56",
+                    Hingoli: "https://maps.app.goo.gl/ZQHffnbYaBBQaLNu8",
+                    Akola: "https://maps.app.goo.gl/5Ej6PKER769emC7L7",
+                    Amravati: "https://maps.app.goo.gl/2x9ZtHrjjv7X15wa9",
+                    Buldhana: "https://maps.app.goo.gl/mvbjuhHgtrNpv3zj6",
+                    Washim: "https://maps.app.goo.gl/GjFdwVCCSAMYPMqn7",
+                    Yavatmal: "https://maps.app.goo.gl/hytDtKLvwVqrCmMb7",
+                    Wardha: "https://maps.app.goo.gl/R586ctvUMBHgxkSYA",
+                    Chandrapur: "https://maps.app.goo.gl/qXTfC3zehzTmUFkp6",
+                    Gadchiroli: "https://maps.app.goo.gl/Gtvf1uSxxWRBqNLZ7",
+                    Bhandara: "https://maps.app.goo.gl/i7JWQoHXXLGGSNkGA",
+                    Gondia: "https://maps.app.goo.gl/U3De4RosekQZYf1L7",
+                    Jalgaon: "https://maps.app.goo.gl/XLL2QanepcgFGsk88",
+                    Dhule: "https://maps.app.goo.gl/AGoMk3oerQYgq3LFA",
+                    Nandurbar: "https://maps.app.goo.gl/KCzTTL1dhBPTtHDq5",
+                    Ahmednagar: "https://maps.app.goo.gl/LwZTt6UjvQhjsPTo6",
+                };
+                location = scanLocations[district];
+            }
+
+            // Blood Test Centers (Pathology Labs)
+            else if (type === "blood") {
+                const bloodTestLocations = {
+                    Mumbai: "https://maps.app.goo.gl/r1tTcSTu7Kmqx1gT9",
+                    Pune: "https://maps.app.goo.gl/kSFHr2YJJzKU4CM68",
+                    Thane: "https://maps.app.goo.gl/XvfoBtaaaN2TK8LSA",
+                    Nagpur: "https://maps.app.goo.gl/kUpGi6W1ViTqoKNx7",
+                    Nashik: "https://maps.app.goo.gl/DcrMPDSPU18nb2AW7",
+                    Raigad: "https://maps.app.goo.gl/VD7Pd1q6mdfLxXm3A",
+                    Sindhudurg: "https://maps.app.goo.gl/ZX4chJ8aKNdqAaMp6",
+                    Ratnagiri: "https://maps.app.goo.gl/EM6gmbaxJtdTjrCM9",
+                    Satara: "https://maps.app.goo.gl/w5Apb6r2YK8gJ1hq8",
+                    Sangli: "https://maps.app.goo.gl/WFUPCsSV9Cf9hFBj8",
+                    Kolhapur: "https://maps.app.goo.gl/WcPcDjfDjnEpK9Gu8",
+                    Solapur: "https://maps.app.goo.gl/4j8DgXMREmSKDQ1K8",
+                    Aurangabad: "https://maps.app.goo.gl/7M9vKDkJNihFwx4bA",
+                    Beed: "https://maps.app.goo.gl/CYEifhFELrCZKTC78",
+                    Latur: "https://maps.app.goo.gl/GiK1moeh4oAVnAp77",
+                    Osmanabad: "https://maps.app.goo.gl/BsPsSwkZSpumArBMA",
+                    Nanded: "https://maps.app.goo.gl/HcEcgFeGwrKLdei26",
+                    Parbhani: "https://maps.app.goo.gl/U6hN6imUXSAZUQXD8",
+                    Jalna: "https://maps.app.goo.gl/Vv5zCrBfUHeKpzKV9",
+                    Hingoli: "https://maps.app.goo.gl/sWStF2WK28y7r9Cf9",
+                    Akola: "https://maps.app.goo.gl/3CGLUbyAwcer35Su5",
+                    Amravati: "https://maps.app.goo.gl/jYsX4DFMd5dLzTbN8",
+                    Buldhana: "https://maps.app.goo.gl/oyyBC4eQxDkaQddV6",
+                    Washim: "https://maps.app.goo.gl/cR5636rqsnBfsGbMA",
+                    Yavatmal: "https://maps.app.goo.gl/F6nPmqqzvYbeDJJv8",
+                    Wardha: "https://maps.app.goo.gl/Pe8cJ3rS3thNmsHo8",
+                    Chandrapur: "https://maps.app.goo.gl/eXf8833aArF8iCx69",
+                    Gadchiroli: "https://maps.app.goo.gl/yCkDeTgUaRMqDf89A",
+                    Bhandara: "https://maps.app.goo.gl/4EZcAAKSsbqbUcVm7",
+                    Gondia: "https://maps.app.goo.gl/skqKzfMJJESNujBE9",
+                    Jalgaon: "https://maps.app.goo.gl/gecfUkt22ziyoa3V8",
+                    Dhule: "https://maps.app.goo.gl/aqHDZYXVoTT9tCBP7",
+                    Nandurbar: "https://maps.app.goo.gl/JcWddDUz7BMAGnHC6",
+                    Ahmednagar: "https://maps.app.goo.gl/SV1fEQdvVU43ujBo7",
+                };
+                location = bloodTestLocations[district];
+            }
+
+            return location;
+        }
+
+        function openLocation() {
+            const typeSelect = document.getElementById("typeSelect").value;
+            const districtSelect = document.getElementById("districtSelect").value;
+
+            if (!typeSelect || !districtSelect) {
+                alert("Please select both type and district.");
+                return;
+            }
+
+            const location = getLocation(typeSelect, districtSelect);
+
+            if (location) {
+                window.open(location, "_blank");
+            } else {
+                alert("No location found for the selected type and district.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
